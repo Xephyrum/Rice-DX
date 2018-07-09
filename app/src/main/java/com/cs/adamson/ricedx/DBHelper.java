@@ -167,7 +167,6 @@ public class DBHelper extends SQLiteOpenHelper {
         double a = ybar - b1 * xbar1 - b2 * xbar2;
 
         return Math.ceil(a + b1 * windSpeed + b2 * soilTemp);
-
     }
 
     public boolean dateExists(String date) {

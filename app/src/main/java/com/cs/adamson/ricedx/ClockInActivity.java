@@ -173,7 +173,7 @@ public class ClockInActivity extends AppCompatActivity {
     private void clockInError(String message) {
         AlertDialog.Builder dlgAlert = new AlertDialog.Builder(ClockInActivity.this);
         dlgAlert.setMessage(message);
-            //dlgAlert.setIcon(R.drawable.close);
+        //dlgAlert.setIcon(R.drawable.close);
         dlgAlert.setTitle("Error");
         dlgAlert.setPositiveButton("OK", null);
         dlgAlert.setCancelable(true);
@@ -262,7 +262,7 @@ public class ClockInActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 AlertDialog.Builder dlgAlert = new AlertDialog.Builder(ClockInActivity.this);
                                 dlgAlert.setMessage(e.getMessage());
-                                    //dlgAlert.setIcon(R.drawable.close);
+                                //dlgAlert.setIcon(R.drawable.close);
                                 dlgAlert.setTitle("ERROR");
                                 dlgAlert.setPositiveButton("OK", null);
                                 dlgAlert.setCancelable(true);
@@ -304,7 +304,6 @@ public class ClockInActivity extends AppCompatActivity {
 
         return 6366000 * tt;
     }
-
 
     private void checkGPS() {
         Log.v("TAG", "Checking GPS");
@@ -366,13 +365,6 @@ public class ClockInActivity extends AppCompatActivity {
 
         else{
             if (ActivityCompat.checkSelfPermission(ClockInActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 Toast.makeText(ClockInActivity.this, "Please enable LOCATION ACCESS in the settings", Toast.LENGTH_LONG).show();
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
                 return;
@@ -384,13 +376,6 @@ public class ClockInActivity extends AppCompatActivity {
                 hideDialog();
             }
         }
-
-
-
-
-
-
-
     }
 
     private void showDialog(){

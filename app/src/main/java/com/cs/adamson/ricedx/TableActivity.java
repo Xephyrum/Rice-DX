@@ -13,7 +13,6 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import com.cs.adamson.ricedx.DBHelper;
 
-
 public class TableActivity extends AppCompatActivity {
 
     private DBHelper myDb;
